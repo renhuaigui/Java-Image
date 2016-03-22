@@ -1,0 +1,56 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x0000000077120901, pid=556, tid=1252
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_60-b27) (build 1.8.0_60-b27)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.60-b23 mixed mode windows-amd64 compressed oops)
+# Problematic frame:
+# C  [ntdll.dll+0x50901]
+#
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000000005725c800):  JavaThread "Finalizer" daemon [_thread_in_native, id=1252, stack(0x0000000058600000,0x0000000058700000)]
+
+siginfo: ExceptionCode=0xc0000005, reading address 0x00000d655bac5cb8
+
+Registers:
+RAX=0x000000884239f78b, RBX=0x00000d655bac5cb0, RCX=0x000000ffffffffff, RDX=0x0000000000000000
+RSP=0x00000000586ff4c0, RBP=0x000000010fc1ef70, RSI=0x0000000000000000, RDI=0x0000000000000000
+R8 =0x000000010fc1ef60, R9 =0xfeeefeeefeeefeee, R10=0x000007feecc7b6e0, R11=0x0000000002705c40
+R12=0x000000005b770000, R13=0x00000000586ff740, R14=0x00000000586ff620, R15=0x000000005725c800
+RIP=0x0000000077120901, EFLAGS=0x0000000000010202
+
+Top of Stack: (sp=0x00000000586ff4c0)
+0x00000000586ff4c0:   000000005725c800 000000005705c7c8
+0x00000000586ff4d0:   000000005725c800 00000000586ff620
+0x00000000586ff4e0:   00000000586ff740 0000000000000000
+0x00000000586ff4f0:   00000000570949f8 000000010fbdeee0
+0x00000000586ff500:   000000005725c800 00000000586ff620
+0x00000000586ff510:   0000000000000000 00000000570949f8
+0x00000000586ff520:   000000010fc1ef70 00000000586ff630
+0x00000000586ff530:   000000010fc1ef70 0000000076ed1a7a
+0x00000000586ff540:   fffffffffffffffe 00000000586ff740
+0x00000000586ff550:   0000000000000098 000007feecc94ed2
+0x00000000586ff560:   000000010fbdeee0 000007feed143758
+0x00000000586ff570:   000000005b77e480 000000005b77e490
+0x00000000586ff580:   0000000000000000 0000000002606340
+0x00000000586ff590:   000000010fc1ef70 000007feecc7b741
+0x00000000586ff5a0:   000000005b69fda0 0000000057059688
+0x00000000586ff5b0:   00000000586ff630 000000005b69fd80 
+
+Instructions: (pc=0x0000000077120901)
+0x00000000771208e1:   ff ff 00 00 00 49 33 dc 48 23 c1 48 c1 eb 04 48
+0x00000000771208f1:   33 d8 48 33 1d ce ea 0d 00 48 c1 e3 04 0f 0d 0b
+0x0000000077120901:   48 8b 7b 08 49 bd 01 00 00 00 01 00 00 00 49 be
+0x0000000077120911:   ff 7f 00 00 ff ff ff ff 41 c6 40 0f 80 41 88 70 
+
+
